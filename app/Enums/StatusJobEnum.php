@@ -19,6 +19,19 @@ enum StatusJobEnum: string
         return array_map(fn($case) => $case->value, self::cases());
     }
 
+    public function isApplicable(): bool
+    {
+        return $this === self::PUBLISHED;
+    }
+
+    public static function creatableValues(): array
+    {
+        return [
+            self::DRAFT->value,
+            self::PUBLISHED->value,
+        ];
+    }
+
     public function label(): string
     {
         return match ($this) {
