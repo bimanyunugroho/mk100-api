@@ -1,20 +1,20 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\DTOs\Auth\LoginDataDTO;
 use App\DTOs\Auth\RegisterDataDTO;
 use App\Enums\RoleUserEnum;
 use App\Exceptions\InvalidCredentialsException;
 use App\Exceptions\UnprocessableException;
+use App\Models\User;
 use App\Repositories\Contracts\Auth\AuthRepositoryInterface;
 use App\Services\Auth\AuthService;
-use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Mockery;
 use Mockery\MockInterface;
 use Tests\TestCase;
-use Mockery;
 
 class AuthServiceTest extends TestCase
 {
