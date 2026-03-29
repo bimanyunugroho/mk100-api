@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\DTOs\Job\CreateJobDataDTO;
 use App\DTOs\Job\UpdateJobDataDTO;
@@ -14,9 +14,9 @@ use App\Repositories\Contracts\Job\JobRepositoryInterface;
 use App\Services\Job\JobService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Mockery;
 use Mockery\MockInterface;
 use Tests\TestCase;
-use Mockery;
 
 class JobServiceTest extends TestCase
 {

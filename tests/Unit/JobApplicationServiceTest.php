@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\DTOs\Job\ApplyJobDataDTO;
 use App\Exceptions\ConflictException;
@@ -11,12 +11,12 @@ use App\Repositories\Contracts\Job\JobApplicationRepositoryInterface;
 use App\Repositories\Contracts\Job\JobRepositoryInterface;
 use App\Services\Job\JobApplicationService;
 use App\Services\Shared\FileUploadService;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\UploadedFile;
+use Mockery;
 use Mockery\MockInterface;
 use Tests\TestCase;
-use Mockery;
 
 class JobApplicationServiceTest extends TestCase
 {
